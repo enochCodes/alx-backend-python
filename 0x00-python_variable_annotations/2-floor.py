@@ -5,6 +5,7 @@
 
 import math
 
+
 def floor(n: float) -> int:
     """
     floor anotaiton
@@ -12,4 +13,3 @@ def floor(n: float) -> int:
     anotations
     """
     return math.floor(n)
-
