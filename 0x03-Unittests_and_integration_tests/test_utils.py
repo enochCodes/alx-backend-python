@@ -8,6 +8,7 @@ from utils import access_nested_map
 
 class TestAccessNestedMap(unittest.TestCase):
     """Test cases for the AccessNestedMap function"""
+
     @parameterized.expand
     def test_access_nested_map(self):
         data = {'a': {'b': {'c': 1}}}
