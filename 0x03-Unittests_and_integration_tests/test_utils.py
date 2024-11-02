@@ -10,7 +10,6 @@ class TestAccessNestedMap(unittest.TestCase):
     """Test cases for the AccessNestedMap function"""
     @parameterized.expand
     def test_access_nested_map(self):
-        """" Test case for access_nested_map"""
         data = {'a': {'b': {'c': 1}}}
         self.assertEqual(access_nested_map(data, ['a', 'b', 'c']), 1)
 
