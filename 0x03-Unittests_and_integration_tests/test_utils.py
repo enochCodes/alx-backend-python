@@ -22,11 +22,11 @@ class TestAccessNestedMap(unittest.TestCase):
         ({}, ("a",)),
         ({"a": 1}, ("a", "b"))
     ])
-    def test_access_nested_map_keyerror(self):
-        """Test access_nested_map with a KeyError"""
-        with self.assertRaises(KeyError):
-            access_nested_map({}, ("a",))
-
+    def test_access_nested_map_keyerror(self, nested_map, path):
+        """Test access_nested_map raises KeyError for missing keys"""
+        with self.assertRaises(KeyError) as context:
+            access_nested_map(nested_map, path)
+        self.assertEqual(str(context.exception), str(path[-1]))
 
 if __name__ == '__main__':
     unittest.main()
